@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/kominhyuk/.gradle/caches/modules-2/files-2.1/com.nostra13.universalimageloader/universal-image-loader/1.9.5/442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375/universal-image-loader-1.9.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
+        <dex dex="/Users/kominhyuk/Project/TapDoctor/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.5_63673b4d2bbf572b57d9cefdfabd3cd9e69551c4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/kominhyuk/Project/TapDoctor/app/libs/naver_login_4.1.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="194d914e51c00c0a5319365eea98050edf6625a9">
+        <dex dex="/Users/kominhyuk/Project/TapDoctor/app/build/intermediates/pre-dexed/debug/naver_login_4.1.4_6bf734408d47888dfd189791c5cb54800b967e36.jar" />
+    </item>
+
+</items>

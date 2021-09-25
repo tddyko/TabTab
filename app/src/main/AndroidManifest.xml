@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yjrlab.tabdoctor">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="com.yjrlab.tabdoctor.TapDoctorApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.yjrlab.tabdoctor.view.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name="com.yjrlab.tabdoctor.view.SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yjrlab.tabdoctor.view.main.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.yjrlab.tabdoctor.TapDoctorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yjrlab.tabdoctor.TestActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 페이스북 로그인 -->
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider396488497404472"
+            android:exported="true" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <!-- 네이버 로그인 -->
+        <activity
+            android:name="com.nhn.android.naverlogin.ui.OAuthLoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.nhn.android.naverlogin.ui.OAuthLoginInAppBrowserActivity"
+            android:label="OAuth2.0 In-app"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yjrlab.tabdoctor.TmpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yjrlab.tabdoctor.view.setting.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yjrlab.tabdoctor.view.setting.DoubtRegisterActivity"
+            android:screenOrientation="portrait"></activity>
+
+        <service android:name="com.yjrlab.tabdoctor.service.TapDoctorFCMService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name="com.yjrlab.tabdoctor.service.TapDoctorFCMInstanceService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+
+        <activity
+            android:name="com.yjrlab.tabdoctor.view.PopupActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Dialog" />
+
+        <activity
+            android:name="com.yjrlab.tabdoctor.view.setting.NPorganizationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yjrlab.tabdoctor.view.setting.DoubtResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yjrlab.tabdoctor.view.setting.QuestionHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yjrlab.tabdoctor.view.setting.DoubtDistributionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.yjrlab.tabdoctor.view.setting.QuestionHistoryDetailActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>
